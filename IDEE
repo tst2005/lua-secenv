@@ -1,0 +1,15 @@
+
+
+--
+
+-- creer un nouvel env
+-- fallback sur un autre
+-- gerer le handler d'acces
+---- avoir un cache (l'env utilisé avec les fonctions résolu, indexees)
+-- avoir plusieurs couches
+
+-- 1 objet d'env
+-- 1+ env avec ordre
+-- memoise (cache) sur l'object env...
+
+
