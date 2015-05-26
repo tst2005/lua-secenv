@@ -1,0 +1,13 @@
+http://lua-users.org/wiki/FuncTables
+http://lua-users.org/wiki/TableFuncsTwo
+
+http://lua-users.org/wiki/LuaVirtualization
+	http://lua-users.org/wiki/GeneralizedPairsAndIpairs
+
+
+about fs :
+
+https://github.com/technomancy/calandria/blob/master/mods/orb/init.lua
+https://github.com/tst2005/hate/blob/master/hate/physfs.lua
+
+http://icculus.org/physfs/docs/html/annotated.html
