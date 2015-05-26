@@ -2,6 +2,8 @@
 # Lua SecEnv
 
 The minimal API to expose in a safe environment.
+The challenge was to define (and implement) every dependencies inside the new isolated environement.
+
 
 # 1. Minimal level
 
@@ -96,4 +98,18 @@ Direct access seems ok.
 getmetable("")["foo"] = "bar"
 ```
 
+# Extention
+
+## import
+
+See lua-import-experiment
+
+## require
+
+The new implementation of require and package management should provide new features
+Summary of new possible feature :
+ * automatically setup the _NAME _PATH _PPATH in the module object
+ * use the lua5.3 API with package.searchers
+ * import/export stuff ?
+ * improved parser/lexer to allow some funny stuff
 
