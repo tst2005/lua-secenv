@@ -5,7 +5,8 @@ The minimal API to expose in a safe environment.
 
 # 1. Minimal level
 
-# The functions
+A mininal set of functions `assert`, `error`, `require`, `getmetatable`, `setmetatable` and `load` seems mandatory to make a separated environment execution.
+Some others functions like `pcall`, `xpcall` should be added to the minimal set.
 
 ## load( <string>luacode, _, _, <table>env )
 
@@ -33,13 +34,27 @@ Direct access seems ok, except for the string metatable.
 Direct access seems ok.
 I checked if a table is locked (with __metatable), setmetatable refuse to change it.
 
+## require()
+
+This require function is rebuilt inside the new environment.
+Some implementation should allow to exchange require request from isolated env to uplevel env.
+
 # 2. Basic level
+
+Some others usefull common functions are grouped in the 2nd set.
+
+Some usefull function like `pairs`, `ipairs` and `next` should be rewritten in lua.
 
 ## ipairs()
 
 Direct access seems ok.
 
 ## pairs()
+
+## next()
+
+
+# Standard Modules
 
 
 ## table functions
