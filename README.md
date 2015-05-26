@@ -3,7 +3,7 @@
 
 The minimal API to expose in a safe environment.
 
-# level 1 (minimal)
+# 1. Minimal level
 
 # The functions
 
@@ -31,10 +31,16 @@ Direct access seems ok, except for the string metatable.
 ## setmetatable()
 
 Direct access seems ok.
+I checked if a table is locked (with __metatable), setmetatable refuse to change it.
+
+# 2. Basic level
 
 ## ipairs()
 
 Direct access seems ok.
+
+## pairs()
+
 
 ## table functions
 
@@ -52,6 +58,8 @@ Direct access seems ok.
 * Direct access seems ok.
 * Alternative: lua implementation ?
 
+# 3. Full level
+
 ## os functions (partially)
 
 ## io functions (partially)
@@ -61,12 +69,9 @@ Direct access seems ok.
 * Direct access seems ok.
 * Excepted for random stuff ?.
 
-## utf8 functions
-
 
 ## coroutine functions
 
-##
 
 
 # Known escape issue

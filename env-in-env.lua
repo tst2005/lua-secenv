@@ -12,10 +12,17 @@ rawAB.data = data
 rawAB.code = code
 rawAB.print = print
 
+do
+local raw = rawAB
+assert( raw.require and raw.require("package") and raw.require("_G") )
+raw.require("package").loaded["_V"] = raw.require("_G")
+end
+
 print('data', type(data), 'code', type(code));
 print('io', io)
 return newAB, rawAB
 ]]
+
 local fd = io.open("apilayer.lua", "r")
 local data = fd:read('*all')
 fd:close()

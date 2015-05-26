@@ -1,4 +1,42 @@
 
+1. une partie pour setup _V dans un _G (natif)
+2. une partie pour setup _V dans _V
+
+pour 1.
+il faut embarquer  :
+- compat_env
+- class?
+
+on créé un objet qui correspond a l'env (mais pas l'env direct)
+il contient tous les data dont on a besoin pour le configurer
+
+local _V1 = truc.newenv()
+_V1:setup(...) ??
+
+:add_preloaded()
+:get_preloaded()
+:set_preloaded()
+
+_V1:add_loaded("io", t_io) -- w/ wo/ preload ?
+_V1:get_loaded("io") -- (get the loaded module if exists, never fail)
+
+_V1:load(modname)   -- like a require(modname)
+_V1:unload(modname) -- (remove from package.loaded), never fail
+_V1:reload(modname) -- unload+load
+
+_V1:deny("_G", "io")
+_V1:allow("require", "io")
+_V1:redirect("_G", "io", "require")
+
+_V1:hook("require", f1) -- first loaders (shadowed)
+_V1:hook("missingmod", f2) -- latest loaders (shadowed)
+_V1:hook("globalcall", f3)
+
+
+pour 2. on peux filer un module qui renvoie un gros string a evaluer
+(le contenu que serait le fichier de module lua _V.lua)
+- on considere l'API lumi (lua minimal)
+
 
 --
 
@@ -11,5 +49,8 @@
 -- 1 objet d'env
 -- 1+ env avec ordre
 -- memoise (cache) sur l'object env...
+
+
+
 
 
