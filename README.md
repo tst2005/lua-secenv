@@ -10,7 +10,8 @@ The challenge was to define (and implement) every dependencies inside the new is
 A mininal set of functions `assert`, `error`, `require`, `getmetatable`, `setmetatable` and `load` seems mandatory to make a separated environment execution.
 Some others functions like `pcall`, `xpcall` should be added to the minimal set.
 
-## load( <string>luacode, _, _, <table>env )
+## `load( \<string>luacode, _, _, \<table>env )`
+
 
 To run some `luacode` inside a specific `env`.
 But with a mandatory `env` table (do not use the native _G in `env` ommited ).
