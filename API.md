@@ -13,3 +13,8 @@ local ok, _V = pcall(require, "_V")
 ```
 
 
+# requireany()
+
+```
+local bit, name = requireany('bit', 'bit32', 'bit.numberlua')
+```
