@@ -2,7 +2,7 @@
 
 # see https://github.com/tst2005/luamodules-all-in-one-file/
 # wget https://raw.githubusercontent.com/tst2005/luamodules-all-in-one-file/newtry/pack-them-all.lua
-ALLINONE=./luamodules-all-in-one-file/pack-them-all.lua 
+ALLINONE=./lua-aio/aio.lua
 
 #--icheckinit
 #--icheck
